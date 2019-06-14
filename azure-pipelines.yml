@@ -1,7 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
 
 trigger:
 - master
@@ -10,8 +6,7 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- task: katalon-llc.katalon.katalonTask.katalonTask@0
-  displayName: 'Execute Katalon Studio project'
+- task: katalonTask@0
   inputs:
-    version: 6.2.0
+    version: '6.2.0'
     executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
