@@ -10,11 +10,8 @@ pool:
   vmImage: 'ubuntu-16.04'
 
 steps:
-- script: docker pull katalonstudio/katalon
-  displayName: 'Pull katalon sudio images'
-- script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-  displayName: 'Runnning Katalon TS_RegressionTest'
-- task: PublishPipelineArtifact@0
+- task: katalon-llc.katalon.katalonTask.katalonTask@0
+  displayName: 'Execute Katalon Studio project'
   inputs:
-    artifactName: 'JUnit Report' 
-    targetPath: report/
+    version: 6.2.0
+    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/Regression Tests/All tests"'
