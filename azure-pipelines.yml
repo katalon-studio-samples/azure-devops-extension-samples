@@ -7,11 +7,11 @@ trigger:
 - master
 
 pool:
-  vmImage: 'vs2017-win2016'
+  vmImage: 'macOS-10.14'
 
 steps:
 - task: katalon-llc.katalon.katalonTask.katalonTask@0
   displayName: 'Execute Katalon Studio project'
   inputs:
     version: 6.2.0
-    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+    executeArgs: '-browserType="Safari" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
