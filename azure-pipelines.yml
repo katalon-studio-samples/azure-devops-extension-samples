@@ -14,4 +14,4 @@ steps:
   displayName: 'Execute Katalon Studio project'
   inputs:
     version: 6.2.0
-    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/Regression Tests/All tests"'
+    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
