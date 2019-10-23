@@ -9,5 +9,5 @@ steps:
 - task: katalonTask@0
   displayName: 'Execute Katalon Studio project'
   inputs:
-    version: '6.2.0'
+    version: '7.0.0'
     executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
