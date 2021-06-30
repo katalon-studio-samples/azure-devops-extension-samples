@@ -6,8 +6,8 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- task: katalonTask@0
+- task: katalonTask@1
   displayName: 'Execute Katalon Studio project'
   inputs:
-    version: '7.0.1'
+    version: '8.0.5'
     executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
