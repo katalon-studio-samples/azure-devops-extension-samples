@@ -1,0 +1,17 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- task: ScreenResolutionUtility@1
+  inputs:
+    displaySettings: 'specific'
+    width: '1920'
+    height: '1080'
+- task: katalonTask@0
+  displayName: 'Execute Katalon Studio project'
+  inputs:
+    version: '8.2.5'
+    executeArgs: '-retry=0 -statusDelay=15 -testSuitePath="Test Suites/New Test Suite" -browserType="Chrome" -apiKey=$(katalon_api_key)'
