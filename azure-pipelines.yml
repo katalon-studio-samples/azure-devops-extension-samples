@@ -10,4 +10,4 @@ steps:
   displayName: 'Execute Katalon Studio project'
   inputs:
     version: '8.2.5'
-    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey='2974be38-4a97-490b-b690-8af6aa36b765'
+    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=$(katalon_api_key)'
