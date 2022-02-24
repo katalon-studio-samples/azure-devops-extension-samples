@@ -3,11 +3,11 @@ trigger:
 - master
 
 pool:
-  vmImage: 'vs2017-win2016'
+  vmImage: 'windows-2019'
 
 steps:
 - task: katalonTask@1
   displayName: 'Execute Katalon Studio project'
   inputs:
     version: '8.2.5'
-    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=$(katalon_api_key)'
+    executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey='2974be38-4a97-490b-b690-8af6aa36b765'
