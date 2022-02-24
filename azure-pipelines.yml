@@ -1,6 +1,6 @@
 
 trigger:
-- master
+- STUDIO-1547
 
 pool:
   vmImage: 'windows-2019'
